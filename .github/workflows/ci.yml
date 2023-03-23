@@ -3,12 +3,10 @@ name: CI
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
+  pull_request:
     branches:
       - main
-  # pull_request:
-  #   branches:
-  #     - main
-  #     - feature/DIFFPF-47
+      - feature/DIFFPF-47
 
 jobs:
   build:
