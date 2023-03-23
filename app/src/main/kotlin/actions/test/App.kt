@@ -6,7 +6,8 @@ package actions.test
 class App {
     val greeting: String
         get() {
-            return "Hello World!"
+            111
+            return "Hello World2"
         }
 }
 
