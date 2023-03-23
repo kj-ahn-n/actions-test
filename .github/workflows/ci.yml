@@ -18,7 +18,9 @@ jobs:
           java-version: "17"
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: |
+          ./gradlew clean
+          ./gradlew build
 
       - name: Fail if build failed
         if: ${{ failure() }}
