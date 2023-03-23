@@ -6,7 +6,7 @@ package actions.test
 class App {
     val greeting: String
         get() {
-            val a = 111
+            val a = 111111
             a =2
             return "Hello World2"
         }
