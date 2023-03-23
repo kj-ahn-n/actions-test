@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
+  name: check_build
   build:
-    name: check-status
     runs-on: ubuntu-latest
 
     steps:
