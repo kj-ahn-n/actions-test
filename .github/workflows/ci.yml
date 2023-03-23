@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  name: check_build
+  name: check-status
   build:
     runs-on: ubuntu-latest
 
