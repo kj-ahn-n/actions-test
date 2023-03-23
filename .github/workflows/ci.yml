@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,7 +14,7 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v1
         with:
-          java-version: "1"
+          java-version: "17"
 
       - name: Build with Gradle
         run: ./gradlew build
