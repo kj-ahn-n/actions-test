@@ -1,13 +1,16 @@
 name: CI
 
 on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
   pull_request:
     branches:
       - main
+      - feature/DIFFPF-47
 
 jobs:
-  name: check-status
   build:
+    name: check-status
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +21,9 @@ jobs:
           java-version: "17"
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: |
+          ./gradlew clean
+          ./gradlew build
 
       - name: Fail if build failed
         if: ${{ failure() }}
